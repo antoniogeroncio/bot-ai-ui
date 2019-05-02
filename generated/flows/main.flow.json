@@ -1,0 +1,101 @@
+{
+  "version": "0.1",
+  "catchAll": {
+    "onReceive": [],
+    "next": [
+      {
+        "condition": "event.nlu.intent.is('sair')",
+        "node": "END"
+      }
+    ]
+  },
+  "startNode": "entrada",
+  "nodes": [
+    {
+      "id": "bda0320009",
+      "name": "saudacao",
+      "onEnter": [
+        "say #!builtin_text-pSsHWg"
+      ],
+      "onReceive": null,
+      "next": [
+        {
+          "condition": "true",
+          "node": "perguntar"
+        }
+      ]
+    },
+    {
+      "id": "7099199f90",
+      "name": "perguntar",
+      "next": [
+        {
+          "condition": "true",
+          "node": "consultar__api"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-X069Le"
+      ],
+      "onReceive": [
+        "say #!builtin_text-6l4455"
+      ]
+    },
+    {
+      "id": "a54a82eb7c",
+      "name": "entrada",
+      "onEnter": [
+        "getUserVariable {\"name\":\"nickname\",\"output\":\"$r\"}"
+      ],
+      "onReceive": null,
+      "next": [
+        {
+          "condition": "state.$r !== null",
+          "node": "saudacao"
+        },
+        {
+          "condition": "true",
+          "node": "identificacao_usuario"
+        }
+      ]
+    },
+    {
+      "id": "d29fc6b771",
+      "name": "identificacao_usuario",
+      "next": [
+        {
+          "condition": "true",
+          "node": "saudacao"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-z0J9qh"
+      ],
+      "onReceive": [
+        "setUserVariable {\"name\":\"nickname\",\"value\":\"{{event.text}}\",\"expiry\":\"never\"}",
+        "getUserVariable {\"name\":\"nickname\",\"output\":\"$r\"}"
+      ]
+    },
+    {
+      "id": "795eaf390c",
+      "name": "consultar__api",
+      "next": [],
+      "onEnter": [],
+      "onReceive": null
+    },
+    {
+      "id": "c9b9dca6f9",
+      "name": "sair",
+      "next": [
+        {
+          "condition": "event.nlu.intent.name('sair')",
+          "node": "END"
+        }
+      ],
+      "onEnter": [
+        "resetUserVariable {\"name\":\"nickname\"}"
+      ],
+      "onReceive": null
+    }
+  ]
+}

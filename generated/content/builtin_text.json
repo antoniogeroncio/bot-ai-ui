@@ -1,0 +1,60 @@
+[
+  {
+    "id": "builtin_text-pSsHWg",
+    "formData": {
+      "text": "Seja bem vindo ao Chatterbot AI UFAL, {{state.$r}}!",
+      "variations": [],
+      "typing": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2018-05-14T00:57:36.026Z"
+  },
+  {
+    "id": "builtin_text-AY5SSW",
+    "formData": {
+      "text": "Essa é a primeira vez que nós falamos! ",
+      "typing": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2018-05-14T00:59:51.118Z"
+  },
+  {
+    "id": "builtin_text-TtzrCV",
+    "formData": {
+      "text": "Tudo bem, eu esqueci seu nome.",
+      "typing": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2018-05-14T01:06:41.963Z"
+  },
+  {
+    "id": "builtin_text-z0J9qh",
+    "formData": {
+      "text": "Posso saber seu nome por favor?\n",
+      "typing": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2018-05-14T01:08:41.241Z"
+  },
+  {
+    "id": "builtin_text-X069Le",
+    "formData": {
+      "text": "Posso lhe ajudar em algo?",
+      "typing": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2018-05-14T01:16:53.227Z"
+  },
+  {
+    "id": "builtin_text-6l4455",
+    "formData": {
+      "text": "Ok! Deixa eu pensar um pouco...",
+      "variations": [
+        "Vou pensar um pouco..."
+      ],
+      "typing": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-05-01T21:35:44.883Z"
+  }
+]
