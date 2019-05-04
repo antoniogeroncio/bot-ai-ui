@@ -21,25 +21,27 @@
       "next": [
         {
           "condition": "true",
-          "node": "perguntar"
+          "node": "realizar_pergunta"
         }
       ]
     },
     {
       "id": "7099199f90",
-      "name": "perguntar",
+      "name": "realizar_pergunta",
       "next": [
         {
+          "condition": "event.nlu.intent.is('sair')",
+          "node": "sair"
+        },
+        {
           "condition": "true",
-          "node": "consultar__api"
+          "node": "responder_pergunta"
         }
       ],
       "onEnter": [
         "say #!builtin_text-X069Le"
       ],
-      "onReceive": [
-        "say #!builtin_text-6l4455"
-      ]
+      "onReceive": []
     },
     {
       "id": "a54a82eb7c",
@@ -78,24 +80,28 @@
     },
     {
       "id": "795eaf390c",
-      "name": "consultar__api",
-      "next": [],
-      "onEnter": [],
-      "onReceive": null
-    },
-    {
-      "id": "c9b9dca6f9",
-      "name": "sair",
+      "name": "responder_pergunta",
       "next": [
         {
-          "condition": "event.nlu.intent.name('sair')",
-          "node": "END"
+          "condition": "true",
+          "node": "realizar_pergunta"
         }
       ],
       "onEnter": [
-        "resetUserVariable {\"name\":\"nickname\"}"
+        "say #!builtin_text-lYfFOs",
+        "consultarQA {\"question\":\"{{event.text}\"}",
+        "say #!builtin_text-SMHspG"
       ],
       "onReceive": null
+    },
+    {
+      "id": "20956fb82d",
+      "name": "sair",
+      "next": [],
+      "onEnter": [
+        "say #!builtin_text-BYT2kI"
+      ],
+      "onReceive": []
     }
   ]
 }

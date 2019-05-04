@@ -30,7 +30,7 @@
   {
     "id": "builtin_text-z0J9qh",
     "formData": {
-      "text": "Posso saber seu nome por favor?\n",
+      "text": "Qual o seu nome?",
       "typing": true
     },
     "createdBy": "admin",
@@ -39,7 +39,10 @@
   {
     "id": "builtin_text-X069Le",
     "formData": {
-      "text": "Posso lhe ajudar em algo?",
+      "text": "Onde posso ajudar você?",
+      "variations": [
+        "O que você deseja saber?"
+      ],
       "typing": true
     },
     "createdBy": "admin",
@@ -48,7 +51,7 @@
   {
     "id": "builtin_text-6l4455",
     "formData": {
-      "text": "Ok! Deixa eu pensar um pouco...",
+      "text": "Ok! Deixa eu pensar um pouco... {{evento.text}}",
       "variations": [
         "Vou pensar um pouco..."
       ],
@@ -56,5 +59,44 @@
     },
     "createdBy": "admin",
     "createdOn": "2019-05-01T21:35:44.883Z"
+  },
+  {
+    "id": "builtin_text-1GKs3w",
+    "formData": {
+      "text": "{{event.text}}",
+      "typing": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-05-03T02:51:27.968Z"
+  },
+  {
+    "id": "builtin_text-SMHspG",
+    "formData": {
+      "text": "{{state.resposta}}",
+      "typing": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-05-04T03:12:23.685Z"
+  },
+  {
+    "id": "builtin_text-BYT2kI",
+    "formData": {
+      "text": "Obrigado pela visita, até logo!",
+      "typing": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-05-04T04:06:02.932Z"
+  },
+  {
+    "id": "builtin_text-lYfFOs",
+    "formData": {
+      "text": "Espera só um minuto....",
+      "variations": [
+        "Ok, espera um minuto...."
+      ],
+      "typing": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-05-04T04:48:06.794Z"
   }
 ]

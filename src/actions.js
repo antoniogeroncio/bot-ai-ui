@@ -6,9 +6,13 @@ async function consultarQA(state, event, params) {
   const axios = require('axios')
   const getQA = async () => {
     const client = axios.create({
-      baseURL: 'https://opinionated-quotes-api.gigalixirapp.com/v1'
+      baseURL: 'http://10.0.0.103:8081/botApplication'
     })
-    const quote = await client.get('/quotes').then(res => res.data.quotes[0].quote)
+    const ask = await client.get('/api/qa/' + params.question).then(res => res.data)
+    return {
+      ...state,
+      resposta: ask
+    }
   }
   return getQA()
 }

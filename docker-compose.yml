@@ -1,0 +1,6 @@
+version: '2'
+services:
+    bot-ai-ui:
+        image: bot-ai-ui:0.0.1
+        ports:
+          - 3000:3000
